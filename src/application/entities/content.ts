@@ -10,11 +10,11 @@ export class Content {
     this.content = content;
   }
 
-  private validateContentLength(content: string): boolean {
-    return content.length >= 5 && content.length <= 240;
-  }
-
   get value(): string {
     return this.content;
+  }
+
+  private validateContentLength(content: string): boolean {
+    return content.length >= 5 && content.length <= 240;
   }
 }
