@@ -7,7 +7,9 @@ import { UnreadNotification } from '@application/use-cases/unread-notification/u
 import { Body, Controller, Param, Get, Post, Patch } from '@nestjs/common';
 import { CreateNotificationBody } from '../dtos/create-notification-body';
 import { NotificationViewModel } from '../view-models/notification-view-model';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('notifications')
 @Controller('notifications')
 export class NotificationsController {
   constructor(
